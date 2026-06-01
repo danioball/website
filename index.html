@@ -1,10 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 <body>
 
-<h1>Daniel Ballesteros</h1>
+  <div class="fake-page">
+    <h1>Daniel Ballesteros</h1>
+    <p>Welcome to my personal website!</p>
+  </div>
 
-<p>Yes that is Me</p>
+  <div class="toast" id="toast"></div>
 
+  <div class="banner" id="banner">
+
+    <div class="banner-header">
+      <span class="cookie-icon">🍪</span>
+      <h2>We value your privacy</h2>
+    </div>
+
+    <p>
+      We store or access information on your device to personalise ads and content, measure performance,
+      and develop new services. You can accept all, manage your preferences, or continue without accepting.
+      <a href="#">Privacy Policy</a> · <a href="#">Cookie Policy</a>
+    </p>
+
+    <div class="manage-section" id="manageSection">
+
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <label>Strictly necessary <span class="required-badge">always on</span></label>
+          <span>Required for the site to function. Cannot be disabled.</span>
+        </div>
+        <input type="checkbox" checked disabled />
+      </div>
+
+      <hr class="divider" />
+
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <label>Analytics &amp; performance</label>
+          <span>Helps us understand how visitors use the site.</span>
+        </div>
+        <input type="checkbox" checked id="analytics" />
+      </div>
+
+      <hr class="divider" />
+
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <label>Targeted advertising</label>
+          <span>Used to show you relevant ads.</span>
+        </div>
+        <input type="checkbox" checked id="advertising" />
+      </div>
+
+      <hr class="divider" />
+
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <label>Personalisation</label>
+          <span>Customises content based on your profile and browsing history.</span>
+        </div>
+        <input type="checkbox" checked id="personalisation" />
+      </div>
+
+    </div>
+
+    <div class="btn-row">
+      <button class="btn-accept" onclick="accept()">Accept all</button>
+      <button class="btn-save" id="btnSave" onclick="savePrefs()">Save preferences</button>
+      <button class="btn-manage" onclick="toggleManage()">Manage preferences</button>
+      <button class="btn-reject" onclick="reject()">Reject</button>
+    </div>
+
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
