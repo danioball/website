@@ -45,6 +45,7 @@ main {
 
 .col-photo {
   max-width: 16rem;
+  min-width: 0;
   margin: 0 auto;
   margin-bottom: 0.7rem;
 }
