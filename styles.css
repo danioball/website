@@ -56,6 +56,10 @@ main {
   }
 }
 
+.section-figure {
+  margin: 0;
+}
+
 .photo-block {
   padding: 0.2rem;
   background-color: var(--accent);
@@ -65,11 +69,17 @@ main {
   left: -0.7rem;
 }
 
+.photo-caption {
+  margin: 0.9rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+}
+
 .photo {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  height: auto;
   border-radius: 4px;
   position: relative;
   top: 0.7rem;
@@ -115,5 +125,64 @@ h1 {
 
 p.bio {
   margin: 8px 0;
+  color: var(--muted);
+}
+
+.content-section {
+  max-width: 50rem;
+  margin-top: 56px;
+}
+
+.content-section h2 {
+  margin-bottom: 16px;
+}
+
+.section-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .section-grid {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .section-grid.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.section-photo {
+  flex: 0 0 220px;
+  max-width: 220px;
+  min-width: 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .section-photo {
+    margin: 0;
+  }
+}
+
+.photo-block.small {
+  padding: 0.15rem;
+  top: -0.5rem;
+  left: -0.5rem;
+}
+
+.photo-block.small .photo {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.section-text {
+  flex: 1;
+  min-width: 0;
+  max-width: 60ch;
+  margin: 0;
   color: var(--muted);
 }
