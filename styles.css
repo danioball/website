@@ -156,8 +156,8 @@ p.bio {
 }
 
 .section-photo {
-  flex: 0 0 220px;
-  max-width: 220px;
+  flex: 0 0 160px;
+  max-width: 160px;
   min-width: 0;
   margin: 0 auto;
 }
